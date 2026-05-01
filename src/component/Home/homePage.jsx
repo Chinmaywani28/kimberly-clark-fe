@@ -18,7 +18,9 @@ const HomePage = ({ Monthlydata_Gen, Monthlydata_Consume, floor1, floor2, floor3
         },
     };
     return (
+    
         <div>
+            <div>aksdfk</div>
             <Box sx={{ marginTop: 4, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 2, flexWrap: 'wrap' }}>
                 <MediumWhetherCard City={'kunimi'}/>
                 <MediumAirCard Data={{ meter_name: 'フジタ技術センター', location: '志' }} lat={37.87622933692861} lon={140.55045987785402}/>

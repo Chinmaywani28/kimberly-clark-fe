@@ -146,7 +146,7 @@ const Navbar = ({ handleOpen, selectedMenuItem, openDrawer, component, toggleBox
               gap: '4px'
             }}
           >
-            <Logo style={{ margin: 0, padding: 0, display: 'block', width: '400', height: '79', marginLeft: -15, marginTop: -38, top: 20, position: 'relative', cursor: 'pointer' }} onClick={handleLogoClick} />
+            <Logo style={{ margin: 0, padding: 0, display: 'block', width: '230', height: '79', marginLeft: -15, marginTop: -38, top: 20, position: 'relative', cursor: 'pointer' }} onClick={handleLogoClick} />
             <Box
               sx={{
                 display: "flex",
@@ -159,14 +159,14 @@ const Navbar = ({ handleOpen, selectedMenuItem, openDrawer, component, toggleBox
                 あなたの カスタマイズ ダッシュボード について{" "}
                 <Typography>{selectedValue}</Typography>
               </Typography> : <Typography textAlign="left">毎月のエネルギー配分</Typography>} */}
-              {comp ? (
+              {/* {comp ? (
                 <Typography sx={{ textAlign: "left", display: 'flex', gap: '5px' }}>
                   Dashboard{" "}
                   <Typography component="span">{selectedValue}</Typography>
                 </Typography>
               ) : (
                 <Typography textAlign="left">Energy allocation</Typography>
-              )}
+              )} */}
 
             </Box>
           </Box>

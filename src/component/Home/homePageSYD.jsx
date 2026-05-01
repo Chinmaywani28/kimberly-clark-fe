@@ -20,7 +20,7 @@ const HomePage = () => {
     };
     return (
       <div>
-        <Box
+        {/* <Box
           sx={{
             marginTop: 4,
             display: "flex",
@@ -36,7 +36,7 @@ const HomePage = () => {
             lat={13.022851}
             lon={80.178165}
           />
-        </Box>
+        </Box> */}
         <Box
           sx={{ paddingY: 2, display: "flex", flexDirection: "column", gap: 2 }}
         >
@@ -65,9 +65,9 @@ const HomePage = () => {
 
         </Box>
 
-        <div>
+        {/* <div>
               <HeatmapChart />
-            </div>
+            </div> */}
         {/* <Box>
                 <SmallCard Data={no2} />
                 <MediumCard Data={no2M} />

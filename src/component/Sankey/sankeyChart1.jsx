@@ -101,10 +101,10 @@ const SankeyChart = () => {
             `Diesel Generator ${Math.floor(Monthlydata_Gen.dg)}MWh`,
             `Electricity Grid ${Monthlydata_Gen.meter}MWh`,
             `Solar ${Monthlydata_Gen.solar}MWh`,
-            `LNT ${parseFloat(
+            `KC ${parseFloat(
                 (Monthlydata_Gen.solar + Monthlydata_Gen.meter).toFixed(2)
             )}MWh`,
-            `TC-4 ${parseFloat(
+            `KC-1 ${parseFloat(
                 (Monthlydata_Consume.op1 + difference).toFixed(2)
             )}MWh`,
             `TC-4I ${parseFloat(
@@ -124,48 +124,48 @@ const SankeyChart = () => {
                 data: [
                     {
                         from: `Diesel Generator ${Math.floor(Monthlydata_Gen.dg)}MWh`,
-                        to: `LNT ${parseFloat(
+                        to: `KC ${parseFloat(
                             (Monthlydata_Gen.solar + Monthlydata_Gen.meter).toFixed(2)
                         )}MWh`,
                         flow: Math.floor(Monthlydata_Gen.dg),
                     },
                     {
                         from: `Electricity Grid ${Monthlydata_Gen.meter}MWh`,
-                        to: `LNT ${parseFloat(
+                        to: `KC ${parseFloat(
                             (Monthlydata_Gen.solar + Monthlydata_Gen.meter).toFixed(2)
                         )}MWh`,
                         flow: Monthlydata_Gen.meter,
                     },
                     {
                         from: `Solar ${Monthlydata_Gen.solar}MWh`,
-                        to: `LNT ${parseFloat(
+                        to: `KC ${parseFloat(
                             (Monthlydata_Gen.solar + Monthlydata_Gen.meter).toFixed(2)
                         )}MWh`,
                         flow: Monthlydata_Gen.solar,
                     },
                     {
-                        from: `LNT ${parseFloat(
+                        from: `KC ${parseFloat(
                             (Monthlydata_Gen.solar + Monthlydata_Gen.meter).toFixed(2)
                         )}MWh`,
-                        to: `TC-4 ${parseFloat(
+                        to: `KC-1 ${parseFloat(
                             (Monthlydata_Consume.op1 + difference).toFixed(2)
                         )}MWh`,
                         flow: parseFloat((Monthlydata_Consume.op1 + difference).toFixed(2)),
                     },
                     {
-                        from: `LNT ${parseFloat(
+                        from: `KC ${parseFloat(
                             (Monthlydata_Gen.solar + Monthlydata_Gen.meter).toFixed(2)
                         )}MWh`,
-                        to: `TC-5 ${parseFloat(
+                        to: `KC-2 ${parseFloat(
                             (Monthlydata_Consume.op2 + difference).toFixed(2)
                         )}MWh`,
                         flow: parseFloat((Monthlydata_Consume.op2 + difference).toFixed(2)),
                     },
                     {
-                        from: `LNT ${parseFloat(
+                        from: `KC ${parseFloat(
                             (Monthlydata_Gen.solar + Monthlydata_Gen.meter).toFixed(2)
                         )}MWh`,
-                        to: `TC-6 ${parseFloat(
+                        to: `KC-3 ${parseFloat(
                             (Monthlydata_Consume.admin + difference).toFixed(2)
                         )}MWh`,
                         flow: parseFloat(

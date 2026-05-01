@@ -9,6 +9,7 @@ import { iconsCon } from "../../config/iconsConfig";
 import * as echarts from "echarts";
 import LineChart from './lineChart';
 import GaugeChart from './gauge';
+import HeatmapChart from '../../Sankey/heatmap';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend, Filler);
 
@@ -679,8 +680,9 @@ const MediumCard = ({ Data, chartData }) => {
   
 
   return (
-    
-    <Card sx={{ ...styles.thinBorder, width: Data?.gadget_type === "intermidiateValve" ? 1080 : 700, height: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 4, borderRadius: '20px', bgcolor: tempCheck?.bgColor, borderColor: tempCheck?.borderColor, borderWidth: 2 }}>
+
+    <div>
+      <Card sx={{ ...styles.thinBorder, width: Data?.gadget_type === "intermidiateValve" ? 1080 : 600, height: '200px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 4, borderRadius: '20px', bgcolor: tempCheck?.bgColor, borderColor: tempCheck?.borderColor, borderWidth: 2 }}>
       {/* <div>afnkavn</div> */}
       <Box ref={ref} sx={{ color: tempCheck?.fontColor, position: 'relative', bottom: 10 }}>
         <ToolTipBox title={`${'Device Name : ' + (Data?.meter_name || 'N/A')}`} arrow>
@@ -698,7 +700,7 @@ const MediumCard = ({ Data, chartData }) => {
           </Typography>
         </ToolTipBox>
       </Box>
-      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', color: tempCheck?.colors, gap: 1, position: 'relative', top: 30 }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', color: tempCheck?.colors, gap: 1, position: 'relative', top: 12 }}>
         {/* {getIcon(Data?.gadget_type)?.render({ width: 32, height: 32, color: tempCheck?.colors, textAlign: 'left' })} */}
         {getIcon(Data?.gadget_type)?.render({
           width: 32,
@@ -707,7 +709,7 @@ const MediumCard = ({ Data, chartData }) => {
           style: { textAlign: 'left' }
         })}
 
-        <Typography variant='h6' fontWeight='bold' sx={{
+        <Typography variant='h5' fontWeight='bold' sx={{
           textAlign: 'left',
           whiteSpace: 'nowrap',
           overflow: 'hidden',
@@ -819,17 +821,33 @@ const MediumCard = ({ Data, chartData }) => {
               </Box>
             )}
         </Box>
-        <Box sx={{ position: 'relative', left: Data?.gadget_type === 'intermidiateValve' ? 40 : 0 }}>
+        <Box sx={{ position: 'relative', left: Data?.gadget_type === 'intermidiateValve' ? 40 : 30, width: '65%', height: 135 }}>
           {(Data?.gadget_type === 'intermidiateEnergy' && Data?.range !== 'live') ? (
-            <Bar data={dataBar} options={optionsBar} width={600} height={185} />
+            <Bar data={dataBar} options={optionsBar}  />
           ) : (
-            <Line data={data} options={options} width={600} height={185} />
+            <Line data={data} options={options}  />
 
             // <heatmap/>
+
+            
           )}
         </Box>
+
+        
       </Box>
     </Card >
+
+    {/* <div>
+          <div>
+              <HeatmapChart />
+            </div>
+        </div> */}
+    </div>
+    
+    
+    
+
+    
   );
 };
 
