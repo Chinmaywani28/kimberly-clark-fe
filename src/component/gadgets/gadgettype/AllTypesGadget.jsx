@@ -163,6 +163,10 @@ const AllTypeGadget = ({ open, handleClose, typeGraph, allMeters, componentType 
         newChart = chartsObj.find((chart) => chart.chartId === 'intermidiateEnergy')?.render({ Data: enIntData });
         break;
 
+      case "advanceEnergy":
+        newChart = chartsObj.find((chart) => chart.chartId === 'intermidiateEnergy')?.render({ Data: enIntData });
+        break;
+
       case "basicPower":
         newChart = chartsObj.find((chart) => chart.chartId === 'basicPower')?.render({ Data: powBasicData });
         break;
