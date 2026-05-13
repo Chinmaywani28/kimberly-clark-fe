@@ -8,6 +8,9 @@ import SmallCard from '../card/GeneralisedCards/smallCard'
 import { gas, gasM, no2, no2M } from '../config/cardsConfigData'
 import MediumCard from '../card/GeneralisedCards/mediumCard'
 import HeatmapChart from '../Sankey/heatmap'
+import SankeyChartDDSixthMayThree from '../Sankey/sankey-raheja'
+
+
 
 
 const HomePage = () => {
@@ -56,8 +59,12 @@ const HomePage = () => {
             }}
           >
             {/* <SankeyChartSYD /> */}
+            {/* <h1>lajdsf</h1> */}
             <SankeyChart />
+
             
+            {/* <SankeyChartDDSixthMayThree/> */}
+
 
             
           </Box>

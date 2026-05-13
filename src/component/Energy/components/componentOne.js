@@ -16,6 +16,8 @@ import { energy_day } from "../../Services/congif_energy_combine/config_energy_f
 import { grey } from "@mui/material/colors";
 import "./../image.css";
 import ImageBox from "./imageComponent";
+import HeatmapChart from '../../Sankey/heatmap';
+
 
 const ComponentOne = ({
   componentMap,
@@ -549,7 +551,8 @@ const ComponentOne = ({
   }, [imageKey]);
 
   return (
-    <Box
+      <div>
+           <Box
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -649,8 +652,20 @@ const ComponentOne = ({
           }
           return null;
         })}
+
+        
       </Grid>
-    </Box>
+       {/* <div>
+           <HeatmapChart/>
+        </div> */}
+
+      
+    </Box>   
+
+        
+
+      </div>
+    
   );
 };
 

@@ -197,6 +197,40 @@ const MediumCard = ({ Data, chartData }) => {
     ],
   };
 
+
+  const sampleData = {
+  gadget_name: "Temperature",
+  gadget_type: "intermidiateTemp",
+
+  meter_name: "Room Sensor",
+
+  timestamp: [
+    "10:00",
+    "10:05",
+    "10:10",
+    "10:15",
+    "10:20",
+    "10:25",
+    "10:30",
+  ],
+
+  meter_reading: [
+    22,
+    24,
+    26,
+    25,
+    28,
+    30,
+    27,
+  ],
+
+  min_temp: 20,
+  max_temp: 28,
+  critical_temp: 32,
+
+  status: true,
+};
+
   const getCriticalValues = (type) => {
     if (type === ('intermidiateEnergy')) {
       setMinValue(Number(Data?.min_energy));
@@ -822,15 +856,22 @@ const MediumCard = ({ Data, chartData }) => {
             )}
         </Box>
         <Box sx={{ position: 'relative', left: Data?.gadget_type === 'intermidiateValve' ? 40 : 30, width: '65%', height: 135 }}>
-          {(Data?.gadget_type === 'intermidiateEnergy' && Data?.range !== 'live') ? (
+          {(Data?.gadget_type === 'intermidiateEnergy' && Data?.range !== 'live') 
+          ? 
+          (
             <Bar data={dataBar} options={optionsBar}  />
-          ) : (
+          ) 
+          : (
             <Line data={data} options={options}  />
 
-            // <heatmap/>
+    
 
             
           )}
+
+            {/* <Bar data={dataBar} options={optionsBar}  /> */}
+
+
         </Box>
 
         

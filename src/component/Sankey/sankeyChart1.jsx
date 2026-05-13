@@ -124,48 +124,48 @@ const SankeyChart = () => {
                 data: [
                     {
                         from: `Diesel Generator ${Math.floor(Monthlydata_Gen.dg)}MWh`,
-                        to: `KC ${parseFloat(
+                        to: `Raheja ${parseFloat(
                             (Monthlydata_Gen.solar + Monthlydata_Gen.meter).toFixed(2)
                         )}MWh`,
                         flow: Math.floor(Monthlydata_Gen.dg),
                     },
                     {
                         from: `Electricity Grid ${Monthlydata_Gen.meter}MWh`,
-                        to: `KC ${parseFloat(
+                        to: `Raheja ${parseFloat(
                             (Monthlydata_Gen.solar + Monthlydata_Gen.meter).toFixed(2)
                         )}MWh`,
                         flow: Monthlydata_Gen.meter,
                     },
                     {
                         from: `Solar ${Monthlydata_Gen.solar}MWh`,
-                        to: `KC ${parseFloat(
+                        to: `Raheja ${parseFloat(
                             (Monthlydata_Gen.solar + Monthlydata_Gen.meter).toFixed(2)
                         )}MWh`,
                         flow: Monthlydata_Gen.solar,
                     },
                     {
-                        from: `KC ${parseFloat(
+                        from: `Raheja ${parseFloat(
                             (Monthlydata_Gen.solar + Monthlydata_Gen.meter).toFixed(2)
                         )}MWh`,
-                        to: `KC-1 ${parseFloat(
+                        to: `Raheja-1 ${parseFloat(
                             (Monthlydata_Consume.op1 + difference).toFixed(2)
                         )}MWh`,
                         flow: parseFloat((Monthlydata_Consume.op1 + difference).toFixed(2)),
                     },
                     {
-                        from: `KC ${parseFloat(
+                        from: `Raheja ${parseFloat(
                             (Monthlydata_Gen.solar + Monthlydata_Gen.meter).toFixed(2)
                         )}MWh`,
-                        to: `KC-2 ${parseFloat(
+                        to: `Raheja-2 ${parseFloat(
                             (Monthlydata_Consume.op2 + difference).toFixed(2)
                         )}MWh`,
                         flow: parseFloat((Monthlydata_Consume.op2 + difference).toFixed(2)),
                     },
                     {
-                        from: `KC ${parseFloat(
+                        from: `Raheja ${parseFloat(
                             (Monthlydata_Gen.solar + Monthlydata_Gen.meter).toFixed(2)
                         )}MWh`,
-                        to: `KC-3 ${parseFloat(
+                        to: `Raheja-3 ${parseFloat(
                             (Monthlydata_Consume.admin + difference).toFixed(2)
                         )}MWh`,
                         flow: parseFloat(

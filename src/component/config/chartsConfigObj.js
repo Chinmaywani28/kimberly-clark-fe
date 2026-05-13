@@ -1,6 +1,7 @@
 import BigCard from "../card/GeneralisedCards/bigCard";
 import MediumCard from "../card/GeneralisedCards/mediumCard";
 import SmallCard from "../card/GeneralisedCards/smallCard";
+import SmallCardGuage from "../card/GeneralisedCards/smallCard-guage";
 import SmallPressureMeter from "../card/GeneralisedCards/smallPressureMeter";
 import ValveMediumCard from "../card/GeneralisedCards/valveMediumCard";
 
@@ -35,6 +36,19 @@ export const chartsObj = [
     chartId: "advanceEnergy",
     chartName: "Advance Energy Chart",
     render: (props) => <BigCard {...props} />,
+    type: ["energy"],
+    renderImg: () => (
+      <img
+        src="intermEnergy.png"
+        alt="Temperature Icon"
+        style={{ width: "auto", height: "auto" }}
+      />
+    ),
+  },
+  {
+    chartId: "energyGuage",
+    chartName: "Energy Gauge Chart",
+    render: (props) => <SmallCardGuage {...props} />,
     type: ["energy"],
     renderImg: () => (
       <img

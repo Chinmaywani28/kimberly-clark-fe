@@ -70,11 +70,12 @@ const HeatmapChart = ({
 
       // 👉 This replaces your color function
       visualMap: {
+        show: false,
         // min: minValue,
         // max: criticalValue,
         calculable: true,
         orient: "horizontal",
-        left: "center",
+        // left: "center",
         bottom: "0%",
         inRange: {
           color: ["#76C739", "#e7af84", "#F26457"], // green → orange → red
@@ -107,7 +108,7 @@ const HeatmapChart = ({
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  });
+  }, [heatmapData, xAxisData, yAxisData]);
 
   return (
     <Box

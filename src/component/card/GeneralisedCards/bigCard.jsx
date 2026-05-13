@@ -787,8 +787,8 @@ const BigCard = ({ Data, chartData }) => {
       <Card
         sx={{
           ...styles.thinBorder,
-          width: Data?.gadget_type === "intermidiateValve" ? 1080 : 600,
-          height: "200px",
+          width: Data?.gadget_type === "intermidiateValve" ? 1080 : 1200,
+          height: "300px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -1143,8 +1143,8 @@ const BigCard = ({ Data, chartData }) => {
           <Box
             sx={{
               position: "relative",
-              left: Data?.gadget_type === "intermidiateValve" ? 40 : 30,
-              width: "65%",
+              left: Data?.gadget_type === "intermidiateValve" ? 40 : 50,
+              width: "100%",
               height: 135,
             }}
           >
@@ -1158,16 +1158,85 @@ const BigCard = ({ Data, chartData }) => {
               // />
 
                <HeatmapChart
-                heatmapData={[[0, 0, 5], [0, 1, 1], [0, 2, 0], [0, 3, 0], [0, 4, 0]]}
+                heatmapData={[// Sunday
+  [0, 0, 15],
+  [1, 0, 25],
+  [2, 0, 35],
+  [3, 0, 45],
+  [4, 0, 55],
+  [5, 0, 65],
+  [6, 0, 75],
+
+  // Monday
+  [0, 1, 20],
+  [1, 1, 30],
+  [2, 1, 40],
+  [3, 1, 50],
+  [4, 1, 60],
+  [5, 1, 70],
+  [6, 1, 80],
+
+  // Tuesday
+  [0, 2, 18],
+  [1, 2, 28],
+  [2, 2, 38],
+  [3, 2, 48],
+  [4, 2, 58],
+  [5, 2, 68],
+  [6, 2, 78],
+
+  // Wednesday
+  [0, 3, 10],
+  [1, 3, 22],
+  [2, 3, 34],
+  [3, 3, 46],
+  [4, 3, 58],
+  [5, 3, 70],
+  [6, 3, 82],
+
+  // Thursday
+  [0, 4, 12],
+  [1, 4, 24],
+  [2, 4, 36],
+  [3, 4, 48],
+  [4, 4, 60],
+  [5, 4, 72],
+  [6, 4, 84],
+
+  // Friday
+  [0, 5, 16],
+  [1, 5, 26],
+  [2, 5, 36],
+  [3, 5, 46],
+  [4, 5, 56],
+  [5, 5, 66],
+  [6, 5, 76],
+
+  // Saturday
+  [0, 6, 14],
+  [1, 6, 32],
+  [2, 6, 44],
+  [3, 6, 56],
+  [4, 6, 68],
+  [5, 6, 80],
+  [6, 6, 92]]}
                 xAxisData={[
-                    '12a', '1a', '2a', '3a', '4a', '5a', '6a',
-                    '7a', '8a', '9a', '10a', '11a',
-                    '12p', '1p', '2p', '3p', '4p', '5p',
-                    '6p', '7p', '8p', '9p', '10p', '11p'
+                    "12 AM",
+  "4 AM",
+  "8 AM",
+  "12 PM",
+  "4 PM",
+  "8 PM",
+  "11 PM",
                 ]}
                 yAxisData={[
-                    'Saturday', 'Friday', 'Thursday',
-                    'Wednesday', 'Tuesday', 'Monday', 'Sunday'
+                   "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
                 ]}
               />
             }
